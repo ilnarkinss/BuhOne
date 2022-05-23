@@ -1,0 +1,98 @@
+nav
+	display: flex
+	justify-content: center
+	width: 100%
+	height: 80px
+
+	.content_range
+		display: flex
+		justify-content: space-between
+		width: 70%
+		align-items: center
+		
+		#logo
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: 17%
+			text-decoration: none
+			color: #005FA3
+			font-size: 20px
+			font-weight: 900
+
+			img
+				height: 30px
+				width: 30px
+
+		#menu
+			display: flex
+			justify-content: space-between
+			width: 60%
+			list-style-type: none
+			font-size: 18px
+
+			a
+				text-decoration: none
+				color: black
+				font-weight: 700
+
+
+		#burger
+			display: none
+			font-size: 50px
+			transition: outline 0.2s ease
+			justify-content: center
+			align-items: center
+			cursor: pointer
+
+			&>svg
+				width: 30px
+				height: 30px
+				padding: 10px
+
+
+@media screen and (max-width: 820px)
+	nav
+		.content_range
+
+			#menu
+				box-sizing: border-box
+				white-space: nowrap
+				display: flex
+				background-color: white
+				height: 50%
+				z-index: 1
+				position: absolute
+				flex-direction: column
+				right: 0
+				top: 80px
+				opacity: 0
+				width: 0
+				transition: opacity 0.3s ease, width 0.5s ease
+
+				&.active
+					display: flex
+					opacity: 1
+					width: 100%
+
+				&>a
+					width: 100%
+					justify-content: center
+					height: 100%
+					align-items: center
+					display: none
+					transition: color 0.5s ease, background-color 0.5s ease
+
+					&:hover
+						background-color: #005FA3
+						color: white
+
+
+			#burger
+				display: flex
+
+				ul
+					flex-direction: column
+
+
+@media screen and (max-width: 480px)

@@ -1,0 +1,141 @@
+#feedback
+	@extend %block
+
+	& .content_range
+		@extend %content_box
+
+		&>p
+			@extend %desktop_description
+
+		&>h3
+			@extend %desktop_title
+
+	& #fbslider
+		margin-top: 100px
+		width: 100%
+		height: 100%
+
+		& .fbslidermain
+			overflow: hidden
+
+			& .fbsliderfilms
+				position: relative
+				display: flex
+				width: 25000px
+				right: 0
+				transition: right 1s ease
+				
+				&>div
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					width: 100%
+					height: 350px
+
+					&>p 
+						width: 80%
+						display: flex
+						align-items: center
+						line-height: 30px
+
+					&>.author
+						margin-top: 50px
+						display: flex
+						justify-content: flex-start
+						width: 80%
+
+						&>.userimage
+							width: 80px
+							height: 80px
+							background-position: center
+							background-size: cover
+							background-repeat: inherit
+							border-radius: 50px
+
+						&>.usercontainer
+							display: flex
+							justify-content: center
+							flex-direction: column
+							margin-left: 40px
+
+							&>.username
+								font-weight: 700
+								font-size: 18px
+
+
+
+
+
+		& .fbslidecontrol
+			margin: 50px 0 100px 0
+			display: flex
+			align-items: flex-end
+			justify-content: space-between
+
+
+
+			& .fbslidedots
+				display: flex
+				justify-content: flex-start
+				align-items: flex-end
+
+				&>div
+					border-radius: 10px
+					opacity: 0.2
+					width: 10px
+					height: 10px
+					background-color: #005FA3
+					transition: opacity 0.5s ease
+
+
+					&.active
+						opacity: 1
+
+				&>div+div
+					margin-left: 40px
+
+			& .fbslidearrows
+				display: flex
+				align-items: center
+				justify-content: center
+
+				&>div
+					display: flex
+					width: 60px
+					height: 60px
+					background-color: #005FA3
+					color: white
+					justify-content: center
+					align-items: center
+					font-size: 24px
+					font-weight: 900
+					opacity: 0.2
+					transition: opacity 0.5s ease
+
+
+					&:hover
+						opacity: 1
+
+@media screen and (max-width: 768px)
+	#feedback
+		.content_range
+
+			&>p 
+				font-size: 16px
+			
+			&>h3
+				font-size: 36px
+
+		#fbslider
+			.fbslidermain 
+				.fbsliderfilms 
+					&>div 
+						&>p
+							font-size: 14px
+							line-height: 25px
+						&>.author
+							display: none
+
+
+@media screen and (max-width: 480px)

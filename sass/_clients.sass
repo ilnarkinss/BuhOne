@@ -1,0 +1,132 @@
+#clients
+	@extend %block
+	background-color: #EBEBEB
+
+	& .content_range
+		@extend %content_box
+
+		&>h3
+			@extend %desktop_description
+
+		&>p
+			@extend %desktop_title
+
+
+		& #clientsslider
+
+			& .clslidermain
+				overflow: hidden
+
+				& .clsliderfilms
+					position: relative
+					display: flex
+					width: 25000px
+					right: 0
+					height: 300px
+					transition: right 1s ease
+					
+					&>div
+						height: 100%
+						background-position: center
+						background-size: contain
+						background-repeat: no-repeat
+
+
+
+			& .clslidecontrol
+				display: flex
+				align-items: flex-end
+				justify-content: space-between
+
+
+
+				& .clslidedots
+					display: flex
+					justify-content: flex-start
+					align-items: flex-end
+
+					&>div
+						border-radius: 10px
+						opacity: 0.2
+						width: 10px
+						height: 10px
+						background-color: #005FA3
+						transition: opacity 0.5s ease
+
+
+						&.active
+							opacity: 1
+
+					&>div+div
+						margin-left: 40px
+
+				& .clslidearrows
+					display: flex
+					align-items: center
+					justify-content: center
+
+					&>div
+						display: flex
+						width: 60px
+						height: 60px
+						background-color: #005FA3
+						color: white
+						justify-content: center
+						align-items: center
+						font-size: 24px
+						font-weight: 900
+						opacity: 0.2
+						transition: opacity 0.5s ease
+
+
+						&:hover
+							opacity: 1
+
+
+@media screen and (max-width: 570px)
+	#clients 
+		.content_range 
+			&>p 
+				font-size: 36px
+			
+			&>h3
+				font-size: 16px
+
+
+			#clientsslider 
+				.clslidecontrol
+					& .clslidedots
+						// &>div
+						// 	width: 5px
+						// 	height: 5px
+
+						&>div+div
+							margin-left: 20px
+
+					& .clslidearrows
+
+
+@media screen and (max-width: 480px)
+	#clients 
+		.content_range 
+			&>p 
+				font-size: 36px
+			
+			&>h3
+				font-size: 16px
+
+
+			#clientsslider 
+				.clslidecontrol
+					& .clslidedots
+						// &>div
+						// 	width: 5px
+						// 	height: 5px
+
+						&>div+div
+							margin-left: 20px
+
+					& .clslidearrows
+						// &>div
+						// 	width: 40px
+						// 	height: 40px
